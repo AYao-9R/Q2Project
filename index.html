@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Q2Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+
+</head>
+
+<body>
+  <!-- navigation bar -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CultureCuisine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#home">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#categories">categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#about">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#submit">submit recipe</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search" required>
+          <button class="btn btn-dark" type="button">search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- tabs -->
+  <div class="tab-content mt-3">
+
+
+    <!-- home -->
+    <div id="home" class="container tab-pane active text-center"><br>
+      <h1><b>CultureCuisine</b></h1>
+      <p>A place to find all your favorite recipes!</p>
+
+      <!-- carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- item 1 -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2024/07/29/CHICKEN_ADOBO_H_f.jpg.rend.hgtvcom.1280.1280.suffix/1722282685644.webp" alt="adobo" class="d-block">
+          <div class="carousel-caption">
+            <div class="container">
+              <h2>adobo</h2>
+              <p>a flavorful meat dish cooked in vinegar, soy sauce, and spices.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- item 2 -->
+        <div class="carousel-item">
+          <img src="https://themayakitchen.com/wp-content/uploads/2019/10/TURON.jpg" alt="turon" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <div class="container">
+            <h3>turon</h3>
+            <p>a crispy roll with caramelized banana and jackfruit.</p>
+            </div>
+          </div> 
+        </div>
+
+        <!-- item 3 -->
+        <div class="carousel-item">
+          <img src="https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/red-meats-&-red-meat-dishes/kare-kare/kare-kare-main.jpg" alt="karekare" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <div class="container">
+            <h3>kare-kare</h3>
+            <p>a creamy peanut stew with oxtail and vegetables.</p>
+            </div>
+          </div>  
+        </div>
+
+        <!-- item 4 -->
+        <div class="carousel-item">
+          <img src="https://bettysbest.ph/cdn/shop/products/DSCF0770.jpg?v=1638247673" alt="bibingka" class="d-block" style="width:100%">
+          <div class="carousel-caption">
+            <div class="container">
+            <h3>bibingka</h3>
+            <p>a soft rice cake with coconut milk, topped with salted eggs or cheese.</p>
+            </div>
+          </div>  
+        </div>
+
+      </div>
+      
+      <!-- arrows -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+    <!-- end: home -->
+
+
+    <!-- categories -->
+    <div id="categories" class="container tab-pane fade"><br>
+      <h1 class="text-center"><b>recipes</b></h1>
+      <div class="row justify-content-center">
+        <hr>
+        <h2 class="text-center"><b>breakfast</b></h2>
+        <!-- product tapsilog -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI6JXV9ukpzOqR5I95bO4-wyND7Ufuz769Jg&s" alt="card image">
+            <div class="card-body">
+              <h4 class="card-title">tapsilog</h4>
+              <p class="card-text">a tasty combo of beef, garlic rice, and egg.</p>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modaltapsilog">
+                tap to see recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal for tapsilog -->
+        <div class="modal" id="modaltapsilog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header">
+                <h4 class="modal-title">tapsilog</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body">
+              <p><b>Ingredients needed:</b><br>
+              1 lb. beef sirloin sliced thinly<br>
+              3 pieces eggs<br>
+              6 tablespoons cooking oil</p>
+              <p><b>Tapa marinade:</b><br>
+              3 tablespoons Knorr Liquid Seasoning<br>
+              6 cloves crushed garlic<br>
+              ¾ cups pineapple juice<br>
+              2 tablespoons brown sugar<br>
+              ¼ teaspoon ground white pepper</p>
+              <p><b>Sinangag:</b><br>
+              5 cups leftover rice<br>
+              1 teaspoon salt<br>
+              5 cloves garlic crushed</p>
+              <br>
+              <p><b>Instructions:</b><br>
+              Prepare the tapa by placing the beef in a large bowl. Combine with all the tapa marinade ingredients. Mix well and cover the bowl. Place inside the fridge and marinate overnight. Cook the garlic fried rice (sinangag na kanin) by heating 3 tablespoons cooking oil in a pan. Add crushed garlic. Cook until garlic turns light brown. Add the leftover rice. Stir-fry for 3 minutes. Season with salt. Continue to stir-fry for 3 to 5 minutes. Set aside. Start to cook the tapa. Heat a pan and pour the marinated beef into it, including the marinade. Add ¾ cups water. Let the mixture boil. Cover the pan and continue to cook until the liquid reduces to half. Add 3 tablespoons cooking oil into the mixture. Continue to cook until the liquid completely evaporates. Fry the beef tapa in remaining oil until medium brown. Set aside. Fry the egg by pouring 1 tablespoon oil on a pan. Crack a piece of egg and sprinkle enough salt on top. Cook for 30 seconds. Pour 2 tablespoons water on the side of the pan. Cover and let the water boil. Continue to cook until the egg yolks gets completely cooked by the steam. Arrange the beef tapa, sinangag, and fried egg on a large plate to form Tapsilog. Serve with vinegar as dipping sauce for tapa.</p>
+              </div>
+              <!-- modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- product champorado -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="https://www.foxyfolksy.com/wp-content/uploads/2017/06/champorado-recipe-1.jpg" alt="card image">
+            <div class="card-body">
+              <h4 class="card-title">champorado</h4>
+              <p class="card-text">a sweet chocolate rice porridge ususally served with milk or dried fish</p>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalchamp">
+                tap to see recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal for champorado -->
+        <div class="modal" id="modalchamp">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header">
+                <h4 class="modal-title">champorado</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body">
+              <p><b>Ingredients needed:</b><br>
+              5 pieces tablea pure chocolate<br>
+              1 3/4 cups glutinous rice or sushi rice<br>
+              3/4 cup granulated white sugar<br>
+              6 to 8 cups water<br>
+              Condensed milk to taste<br>
+              </p>
+              <br>
+              <p><b>Instructions:</b><br>
+              Pour water in a cooking pot. Bring to a boil.
+              Put-in the tablea and then stir. Let it dissolve in boiling water.
+              Add-in the rice. Let the water re-boil. Set the heat to low-medium and then stir almost constantly to avoid sticking. The rice should be ready when it absorbs the water (about 15 to 25 minutes). Add the sugar. Stir until the sugar dissolves. Transfer the champorado in individual serving bowls. Top with condensed milk.
+              <p>Transfer to a serving plate and pair with your favorite drink. Enjoy!</p>
+              </div>
+              <!-- modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- product LFR -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="https://assets.unileversolutions.com/recipes-v2/175499.jpg" alt="card image">
+            <div class="card-body">
+              <h4 class="card-title">longanisa fried rice</h4>
+              <p class="card-text">a simple twist from the classic fried rice recipe</p>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalrice">
+                tap to see recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal for LFR -->
+        <div class="modal" id="modalrice">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header">
+                <h4 class="modal-title">longanisa fried rice</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body">
+              <p><b>Ingredients needed:</b><br>
+              4 cups cooked rice<br>
+              2 pieces longanisa<br>
+              3/4 cup frozen green peas<br>
+              3/4 cup carrot cubed<br>
+              2 tablespoons butter<br>
+              2 eggs<br>
+              4 tablespoons cooking oil<br>
+              Salt and ground black pepper to taste
+              </p>
+              <br>
+              <p><b>Instructions:</b><br>
+              Crack the eggs in a bowl. Beat until smooth. Heat a pan and pour 3 tablespoons cooking oil. When the oil gets hot, pour the beaten egg into the pan. Cook one side until done and then flip to cook the other side. Remove the egg from the pan. Set aside. Add the remaining oil in the same pan. Once the oil heats-up, add the longanisa. Continue to cook for 5 to 7 minutes (or until the meat is fully cooked) in medium heat while stirring once in a while. Add the butter and let it melt. Slide the rice into the pan. Fold until all the ingredients are well blended. Cook for 3 minutes. Press the tip of the spatula towards the egg on the plate to slice it initially. Add the egg into the pan. Continue to stir fry for 1 minute. Put the green peas and carrots in. Cook for 3 to 5 minutes Add salt and pepper to taste. Stir and make sure that all ingredients are well incorporated.
+              <p>Transfer to a serving bowl and enjoy!</p>
+              </div>
+              <!-- modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <h2 class="text-center"><b>lunch</b></h2>
+        <!-- product sisig -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="https://gourmetcornerph.com/cdn/shop/products/CopyofSMD-PorkSisig-079-09_17_19.jpg?v=1646103208" alt="card image">
+            <div class="card-body">
+              <h4 class="card-title">sisig</h4>
+              <p class="card-text">a crispy, chopped pork with onions and chili, served sizzling.</p>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalSisig">
+                tap to see recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal for sisig -->
+        <div class="modal" id="modalSisig">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header">
+                <h4 class="modal-title">sisig</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body">
+              <p><b>Ingredients needed:</b><br>
+                1 lb pig ears<br>
+                1 lb pig snout<br>
+                1 lb pork belly<br>
+                2 pieces onions minced<br>
+                3 pieces bay leaves<br>
+                2 teaspoons salt<br>
+                4 thumbs ginger crushed<br>
+                1 quarts water<br>
+              </p>
+              <br>
+              <p><b>Dressing:</b><br>
+                ½ cup mayonnaise<br>
+                2 tablespoons sukang iloko<br>
+                ¼ teaspoon ground black pepper<br>
+                1 teaspoon salt<br>
+                1 teaspoon sugar<br>
+                ¼ cup liver spread<br>
+                2 limes<br>
+                1 tablespoon knorr liquid seasoning<br>
+              </p>
+              <p>(you may use either gas or charcoal grill)</p>
+              <br>
+              <p><b>Instructions:</b><br>
+                Combine pig ears, snout, pork belly, ginger, bay leaves, 2 teaspoons salt, and 1 quart of water in a cooking pot.</p>
+              <p>Boil for 1 hour then remove from the pot and drain the water.</p>
+              <p>Heat-up your grill then start grilling the pig parts for around 5 minutes per side. Remove from the grill afterwards and let it cool down.</p>
+              <p>Make the dressing by combining all the dressing ingredients. Mix well.</p>
+              <p>Chop the grilled pig parts into small pieces.</p>
+              <p>In a large mixing bowl, combine the chopped pork with onion and the dressing mixture. Toss until all the ingredients are well blended.
+              </p>
+              <p>Transfer to a serving plate and pair with your favorite drink. Enjoy!</p>
+
+              </div>
+              <!-- modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- product adobo -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2024/07/29/CHICKEN_ADOBO_H_f.jpg.rend.hgtvcom.1280.1280.suffix/1722282685644.webp" alt="card image">
+            <div class="card-body">
+              <h4 class="card-title">adobo</h4>
+              <p class="card-text">a flavorful meat dish cooked in vinegar, soy sauce, and spices.</p>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalAdobo">
+                tap to see recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal for adobo -->
+        <div class="modal" id="modalAdobo">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header">
+                <h4 class="modal-title">adobo</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body">
+              <p><b>Ingredients needed:</b><br>
+              2 lbs pork belly<br> 
+              2 tablespoons garlic<br>
+              5 dried bay leaves<br>
+              4 tablespoons vinegar<br>
+              1/2 cup soy sauce<br>
+              1 tablespoon peppercorn<br>
+              2 cups water<br>
+              salt to taste<br>
+              </p>
+              <br>
+              <p><b>Instructions:</b><br>
+              <p>Combine the pork belly, soy sauce, and garlic then marinade for at least 1 hour.
+              Heat the pot and put-in the marinated pork belly then cook for a few minutes.</p>
+              <p>Pour remaining marinade including garlic.</p>
+              <p>Add the two cups of water, whole pepper corn, and 5 dried bay leaves then bring to a boil. Simmer for 40 minutes to 1 hour.
+              Put in 4 tablespoons of vinegar and simmer for 12 to 15 minutes. Add salt to taste.
+              </p>
+              <p>Transfer to a serving plate and pair with your favorite drink. Enjoy!</p>
+              </div>
+
+              <!-- modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- product kare -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/red-meats-&-red-meat-dishes/kare-kare/kare-kare-main.jpg" alt="card image">
+            <div class="card-body">
+              <h4 class="card-title">kare-kare</h4>
+              <p class="card-text">a creamy peanut stew with oxtail and vegetables.</p>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalKare">
+                tap to see recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal for kare-kare -->
+        <div class="modal" id="modalKare">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header">
+                <h4 class="modal-title">kare-kare</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body">
+              <p><b>Ingredients needed:</b><br>
+              3 lbs oxtail cut in 2 inch slices (you an also use tripe or beef slices)<br>
+              1 piece small banana flower bud sliced<br>
+              1 bundle pechay or bok choy<br>
+              1 bundle string beans cut into 2 inch slices<br>
+              4 pieces eggplants sliced<br>
+              1 cup ground peanuts<br>
+              1/2 cup peanut butter<br>
+              1/2 cup shrimp paste<br>
+              34 Ounces water about 1 liter<br>
+              1/2 cup annatto seeds soaked in a cup of water<br>
+              1/2 cup toasted ground rice<br>
+              1 tbsp minced garlic<br>
+              1 piece onion chopped<br>
+              salt and pepper
+              </p>
+              <br>
+              <p><b>Instructions:</b><br>
+              <p>In a large pot, bring the water to a boil. Then put in the oxtail followed by the onions and simmer for 2.5 to 3 hrs or until tender (35 minutes if using a pressure cooker). Once the meat is tender, add the ground peanuts, peanut butter, and coloring (water from the annatto seed mixture) and simmer for 5 to 7 minutes.</p>
+              <p>Add the toasted ground rice and simmer for 5 minutes.</p>
+              <p>On a separate pan, saute the garlic then add the banana flower, eggplant, and string beans and cook for 5 minutes. Transfer the cooked vegetables to the large pot (where the rest of the ingredients are). Add salt and pepper to taste
+              Serve hot with shrimp paste.</p>
+              <p>Transfer to a serving plate and pair with your favorite drink. Enjoy!</p>                
+              </div>
+              <!-- modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+        <hr>
+
+        <h2 class="text-center"><b>meryenda</b></h2>
+        <!-- product maja -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="https://www.allrecipes.com/thmb/rQezdrbxM57vhFGJwxb_7KsnMpY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8145774-bf07adbb86584863a018050fdaf25e6c.jpg" alt="card image">
+            <div class="card-body">
+              <h4 class="card-title">maja blanca</h4>
+              <p class="card-text">a smooth coconut pudding with sweet corn.</p>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalMaja">
+                tap to see recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal for maja -->
+        <div class="modal" id="modalMaja">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header">
+                <h4 class="modal-title">maja blanca</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body">
+               <p><b>Ingredients needed:</b><br>
+              4 cups coconut milk<br>
+              3/4 cup cornstarch<br>
+              14 ounces condensed milk<br>
+              3/4 cup fresh milk<br>
+              3/4 cup granulated sugar<br>
+              15 ounces whole sweet kernel corn<br>
+              5 tbsp toasted grated coconut<br>
+              </p>
+              <br>
+              <p><b>Instructions:</b><br>
+              <p>Pour the coconut milk in a cooking pot and bring to a boil. Add the sugar, condensed milk, and whole sweet kernel corn then stir until all the ingredients are evenly distributed. Simmer for 8 minutes. Combine the milk and cornstarch then whisk until the cornstarch is diluted then pour the fresh milk and cornstarch mixture in the cooking pot and stir thoroughly. Allow to cook while stirring until the mixture reaches your desired thickness.</p>   
+              <p>Pour the mixture in a serving tray then arrange and flatten the top using a flat tool such as a wooden spatula. Allow to cool down then refrigerate for at least 1 hour. Garnish with toasted grated coconut (or latik if available) Serve cold.</p>  
+              <p>Transfer to a serving plate and pair with your favorite drink. Enjoy!</p>
+              </div>
+              <!-- modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- product turon -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="https://themayakitchen.com/wp-content/uploads/2019/10/TURON.jpg" alt="card image">
+            <div class="card-body">
+              <h4 class="card-title">turon</h4>
+              <p class="card-text">a crispy roll with caramelized banana and jackfruit.</p>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalTuron">
+                tap to see recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal for turon -->
+        <div class="modal" id="modalTuron">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header">
+                <h4 class="modal-title">turon</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body">
+              <p><b>Ingredients needed:</b><br>
+              3 pieces Saba banana quartered<br>
+              12 pieces lumpia wrapper<br>
+              1/2 cup ripe jackfruit sliced into strips<br>
+              ½ cup brown sugar<br>
+              1 cup vanilla ice cream optional<br>
+              1 cup canola oil<br></p>
+              <br>
+              <p>1 cup brown sugar<br>
+              1 cup water
+              </p>
+              <br>
+              <p><b>Instructions:</b><br>
+              <p>Prepare the simple syrup by boiling one cup of water in a pot. Add the brown sugar and stir until sugar is completely diluted. Continue to cook in low heat until the liquid reduces in half and set aside.<p>
+              <p>Prepare the mini turon by arranging a piece of sliced banana over a lumpia wrapper. Put a strip of jackfruit on the side and spread a teaspoon or two of brown sugar. Secure the wrap by folding both sides inwards and then roll until the contents are completely wrapped. Seal the end of the wrapper by rubbing a bit of water using your fingers, and then press it gently against the turon. Start to heat the oil in a pan.</p>
+              <p>Meanwhile, brush some simple syrup all over each piece of turon. You can also dip the turon in syrup.
+              Fry one side in low to medium heat for 3 minutes. Turn over to fry the other side for the same time or until the turon pieces are golden brown and crispy. Arrange in a plate ands serve with scoops of vanilla ice cream.
+              </p>
+              <p>Transfer to a serving plate and pair with your favorite drink. Enjoy!</p>
+              </div>
+              <!-- modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- product bibingka -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="https://bettysbest.ph/cdn/shop/products/DSCF0770.jpg?v=1638247673" alt="card image">
+            <div class="card-body">
+              <h4 class="card-title">bibingka</h4>
+              <p class="card-text">a soft rice cake with coconut milk, topped with salted eggs or cheese.</p>
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalBibi">
+                tap to see recipe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal for bibingka -->
+        <div class="modal" id="modalBibi">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- modal header -->
+              <div class="modal-header">
+                <h4 class="modal-title">bibingka</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <!-- modal body -->
+              <div class="modal-body">
+              <p><b>Ingredients needed:</b><br>
+              1 cup rice flour<br>
+              1/8 teaspoon salt<br>
+              2 1/2 teaspoon baking powder<br>
+              3 tablespoons butter<br>
+              1/2 cup granulated sugar<br>
+              1 cup coconut milk<br>
+              1/4 cup fresh milk<br>
+              1 piece salted duck egg sliced<br>
+              1/2 cup grated cheese<br>
+              3 pieces raw eggs<br>
+              1/4 cup grated coconut<br>
+              pre-cut banana leaf<br>
+              </p>
+              <br>
+              <p><b>Instructions:</b><br>
+              <p>Preheat oven to 375 degrees Fahrenheit.<br>
+              Combine rice flour, baking powder, and salt and mix well, then set it aside.<p>
+              <p>Gradually put in sugar while whisking cream butter. Add the eggs then whisk until every ingredient is well incorporated. Gradually add the rice flour, salt, and baking powder mixture then continue mixing.</p>
+              <p>Pour-in coconut milk and fresh milk then whisk some more for 1 to 2 minutes. Arrange the pre-cut banana leaf on a cake pan or baking pan. Pour the mixture on the pan and bake for 15 minutes.</p>
+              <p>Remove from the oven then top with sliced salted egg and grated cheese (do not turn the oven off).
+
+              Put back in the oven and bake for 15 to 20 minutes or until the color of the top turn medium brown.
+
+              Remove from the oven and let cool.
+
+              Brush with butter and top with grated coconut.</p>
+              <p>Transfer to a serving plate and pair with your favorite drink. Enjoy!</p>
+              </div>
+              <!-- modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+<h2 class="text-center"><b>dinner</b></h2>
+
+<!-- Product section: Baked Macaroni -->
+<div class="col-md-3 mb-3">
+  <div class="card">
+    <img class="card-img-top" src="https://assets.unileversolutions.com/recipes-v2/110282.jpg" alt="Baked Macaroni image">
+    <div class="card-body">
+      <h4 class="card-title">baked macaroni</h4>
+      <p class="card-text">a delicious and cheesy baked macaroni dish.</p>
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalmac">
+        tap to see recipe
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Baked Macaroni -->
+<div class="modal fade" id="modalmac">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalmac">baked macaroni</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><b>ingredients:</b><br>1 lb elbow macaroni, uncooked. For the meat sauce: 3 tbsp butter, 1 lb ground beef, 1 ½ cups diced tomatoes (canned), 1 onion (diced), 1/2 cup diced green bell pepper, 1/2 cup tomato paste, 1 tsp paprika, 1 beef cube, 1 cup water, 1 tbsp sugar, salt and pepper to taste. For the mornay sauce: 3 tbsp butter, 3 tbsp all-purpose flour, 2 cups fresh milk, 1/4 tsp salt, 1 oz grated parmesan cheese, 2 oz grated sharp cheddar cheese.</p>
+
+        <p><b>instructions:</b><br> Cook the macaroni as per the package instructions, but slightly undercook it. Drain and set aside. To make the meat sauce, melt butter in a pot, add ground beef, and cook for 5 minutes until browned. Add onion, bell pepper, and tomatoes and simmer for 3 minutes. Stir in tomato paste, paprika, beef cube, and water, and let it simmer for 20 minutes. Add sugar, salt, and pepper, and mix well. To make the mornay sauce, melt butter in a saucepan, whisk in the flour for 1 minute, and gradually add milk. Cook until the sauce thickens. Stir in salt, parmesan, and cheddar cheese. Combine the macaroni with the meat sauce in a baking dish, and pour the mornay sauce over the top. Bake at 350°F (175°C) for 15-20 minutes. Let it cool a bit before serving. Serve and enjoy!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product section: Sushi Bake -->
+<div class="col-md-3 mb-3">
+  <div class="card">
+    <img class="card-img-top" src="https://thebigmansworld.com/wp-content/uploads/2024/11/sushi-bake-recipe.jpg" alt="Sushi">
+    <div class="card-body">
+      <h4 class="card-title">sushi bake</h4>
+      <p class="card-text">a trendy and flavorful sushi bake recipe.</p>
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalSushi">
+        tap to see recipe
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Sushi Bake -->
+<div class="modal fade" id="modalSushi">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalSushiLabel">sushi bake</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal">close</button>
+      </div>
+      <div class="modal-body">
+        <p><b>ingredients:</b><br> 4 cups cooked white rice, 3 tbsp rice vinegar, 2 tsp granulated sugar, 1 tsp salt. For the cream topping: 1/2 cup softened cream cheese, 2 tbsp sour cream (optional), 1/2 cup mayonnaise, 6 oz chopped kani (imitation crab meat), 1/4 cup diced cucumber. For the topping: 5 tbsp furikake, 3 tbsp masago (optional), 1 tbsp sriracha sauce, 1 sliced avocado.</p>
+
+        <p><b>instructions:</b><br> Preheat the oven to 400°F (200°C). Mix the rice vinegar, sugar, and salt together, microwave for 15 seconds, and stir until dissolved. Stir this mixture into the cooked rice and spread it into a baking dish. Sprinkle with furikake. For the cream topping, mix cream cheese, sour cream, mayonnaise, kani, and cucumber, then spread it over the rice and top with more furikake. Bake for 18 minutes. Mix mayonnaise with sriracha and put it in a squeeze bottle. Once the sushi bake is out of the oven, top it with masago, avocado slices, and drizzle with sriracha mayo. Slice and serve with nori sheets. Enjoy!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product section: Kaldereta -->
+<div class="col-md-3 mb-3">
+  <div class="card">
+    <img class="card-img-top" src="https://assets.unileversolutions.com/recipes-v2/110964.jpg" alt="kaldereta">
+    <div class="card-body">
+      <h4 class="card-title">kaldereta</h4>
+      <p class="card-text">a savory stew with beef, potatoes, and tomato sauce.</p>
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalkaldereta">
+        tap to see recipe
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Kaldereta -->
+<div class="modal fade" id="modalkaldereta">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalkaldereta">kaldereta</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal">close</button>
+      </div>
+      <div class="modal-body">
+        <p><b>ingredients:</b><br> 1 kg beef (chuck or stew cuts), 3 medium potatoes (peeled and sliced), 2 carrots (sliced), 1 onion (chopped), 1 red bell pepper (sliced), 1 cup tomato sauce, 2 tbsp soy sauce, 1/2 cup beef broth, 1/4 cup liver spread or pâté, 3 cloves garlic (minced), salt and pepper to taste.</p>
+
+        <p><b>instructions:</b><br> Heat oil in a large pot and sauté garlic and onion until soft. Add the beef and cook until browned on all sides. Stir in the tomato sauce, soy sauce, and beef broth, and let it simmer for about 1.5 hours or until the beef is tender. Add the potatoes, carrots, and bell pepper, and cook for another 15-20 minutes. Stir in the liver spread, season with salt and pepper, and cook for an additional 5 minutes. Serve hot with steamed rice and enjoy your kaldereta!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</p></p></p></div></div>
+
+<!-- about us -->
+<div id="about" class="container tab-pane fade"> <br>
+  <h1 class="text-center"><b>about us</b></h1>
+  <p>Welcome to the home of classic recipes we all know and love. From soul foods to your favorite traditional dishes, we've got them all.</p>
+  <p>Here at CultureCuisine, we offer easy-to-follow recipes for beginners and more advanced options for seasoned chefs. Feeling lost? Don't worry, we've got detailed instructions to help you perfect your dish.</p>
+  <img src="https://img.freepik.com/premium-photo/pan-full-vegetables-is-being-tossed-air_248459-68520.jpg" alt="Cooking image" class="img-fluid" >
+</div>
+
+<!-- submit recipe  -->
+<div id="submit" class="container tab-pane fade">
+  <h1 class="text-center"><b>Submit Your Recipes Here</b></h1>
+  <p class="text-center">help us share the love by submitting your specialties!</p>
+  <form id="registration-form">
+    <div class="mb-3">
+      <label for="inputName" class="form-label">recipe name:</label>
+      <input type="text" class="form-control" id="inputName" name="name" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="ingredients" class="form-label">ingredients:</label>
+      <textarea class="form-control" rows="5" id="ingredients" name="ingredients" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="instructions" class="form-label">instructions:</label>
+      <textarea class="form-control" rows="5" id="instructions" name="instructions" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-dark">submit recipe</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="mt-3 mb-3 text-center">
+  <p><a href="https://github.com/AYao-9R">Amanda P. K. Yao</a> | 9-Ruby</p>
+</footer>
